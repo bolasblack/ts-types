@@ -1,6 +1,6 @@
 # ts-types
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/bolasblack/ts-types.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/bolasblack/ts-types.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.com/bolasblack/ts-types.svg?branch=master)](https://travis-ci.com/bolasblack/ts-types)
 
 TypeScript type helpers
 
