@@ -1,5 +1,7 @@
 # ts-types
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bolasblack/ts-types.svg)](https://greenkeeper.io/)
+
 TypeScript type helpers
 
 ```
