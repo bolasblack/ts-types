@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@c4605/toolconfs@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@c4605/toolconfs/-/toolconfs-0.2.0.tgz#1454a48828042da587169429dde0c0a983907c8a"
-  integrity sha512-IcO9RGAhEFNJ5WmAk0h1D8dknWozYnfq0d2+1lA0l5SUja6e3kv9ATK5IuOXoLmhuvd8BoI8LY53HDhsUcOnOA==
+"@c4605/toolconfs@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@c4605/toolconfs/-/toolconfs-0.2.1.tgz#638acf02bf3460eb9d1b6aaf32c7c2857d8f65b4"
+  integrity sha512-mgOTjUjVQgLdu8yY1povViAxJ8brBAU9ZUcyHZmcj/wdnR6U/pq+xFy1KVSmoXksi7e6aR4ve6kfCghB8uei9g==
   dependencies:
     "@commitlint/config-conventional" "^7.5.0"
     tslint-config-prettier "^1.18.0"

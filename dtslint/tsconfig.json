@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "@c4605/toolconfs/tsconfig",
   "compilerOptions": {
     "module": "commonjs",
     "lib": ["es6"],
@@ -8,9 +8,6 @@
     "noImplicitThis": true,
     "noUnusedLocals": false,
     "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noEmit": true,
-    "types" : [],
-    "baseUrl": "."
+    "strictFunctionTypes": true
   }
 }

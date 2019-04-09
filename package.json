@@ -9,7 +9,7 @@
     "test": "node ./node_modules/.bin/dtslint --onlyTestTsNext dtslint"
   },
   "devDependencies": {
-    "@c4605/toolconfs": "^0.2.0",
+    "@c4605/toolconfs": "^0.2.1",
     "@commitlint/cli": "^7.5.2",
     "dtslint": "^0.6.0",
     "git-hook-pure": "^1.2.1",
