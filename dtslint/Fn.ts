@@ -1,4 +1,4 @@
-import { ArgsType, FstArgType, SndArgType, ThdArgType } from '../src/Fn'
+import { ArgsType, FstArgType, SndArgType, ThdArgType } from '@c4605/ts-types'
 
 // $ExpectType []
 type ArgsTypeT1 = ArgsType<() => void>

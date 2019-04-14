@@ -1,6 +1,21 @@
-import { Head, Tail, Prepend, Snd, Thd, DeepNonNullable, DeepRequired, DeepOptional, OptionalPropNames, RequiredPropNames, ExcludeKey, RequiredKey, OptionalKey, DeepType, DeepPick, PickNullable } from '../src/Coll'
-
-
+import {
+  Head,
+  Tail,
+  Prepend,
+  Snd,
+  Thd,
+  DeepNonNullable,
+  DeepRequired,
+  DeepOptional,
+  OptionalPropNames,
+  RequiredPropNames,
+  ExcludeKey,
+  RequiredKey,
+  OptionalKey,
+  DeepType,
+  DeepPick,
+  PickNullable,
+} from '@c4605/ts-types'
 
 // $ExpectType never
 type HeadT1 = Head<[]>
@@ -23,8 +38,6 @@ type PrependT1 = Prepend<string, [number, boolean]>
 // $ExpectType [string, ...boolean[]]
 type PrependT2 = Prepend<string, boolean[]>
 
-
-
 // $ExpectType never
 type SndT1 = Snd<[]>
 // $ExpectType never
@@ -41,33 +54,27 @@ type ThdT3 = Thd<[1, 2, 3]>
 // $ExpectType 3
 type ThdT4 = Thd<[1, 2, 3, 4]>
 
-
-
-type DeepOptionalT1 = {a: number | null, b?: {c: string}}
+type DeepOptionalT1 = { a: number | null; b?: { c: string } }
 // $ExpectType { a?: number | null | undefined; b?: { c?: string | undefined; } | undefined; }
 type DeepOptionalT2 = DeepOptional<DeepOptionalT1>
 
-type DeepRequiredT1 = {a?: number | null, b?: {c: string}}
+type DeepRequiredT1 = { a?: number | null; b?: { c: string } }
 // $ExpectType { a: number | null; b: { c: string; }; }
 type DeepRequiredT2 = DeepRequired<DeepRequiredT1>
 
-type DeepNonNullableT1 = {a?: number | null, b?: {c?: string | null} | null}
+type DeepNonNullableT1 = { a?: number | null; b?: { c?: string | null } | null }
 // $ExpectType { a: number; b: { c: string; }; }
 type DeepNonNullableT2 = DeepNonNullable<DeepRequired<DeepNonNullableT1>>
 
-
-
-type OptionalPropNamesT1 = {a?: 1 | null, b?: 2, c: 3 | null, d: 4}
+type OptionalPropNamesT1 = { a?: 1 | null; b?: 2; c: 3 | null; d: 4 }
 // $ExpectType "a" | "b"
 type OptionalPropNamesT2 = OptionalPropNames<OptionalPropNamesT1>
 
-type RequiredPropNamesT1 = {a?: 1 | null, b?: 2, c: 3 | null, d: 4}
+type RequiredPropNamesT1 = { a?: 1 | null; b?: 2; c: 3 | null; d: 4 }
 // $ExpectType "c" | "d"
 type RequiredPropNamesT2 = RequiredPropNames<RequiredPropNamesT1>
 
-
-
-type ExcludeKeyT1 = {a?: 1 | null, b?: 2, c: 3 | null, d: 4}
+type ExcludeKeyT1 = { a?: 1 | null; b?: 2; c: 3 | null; d: 4 }
 type ExcludeKeyT2 = ExcludeKey<ExcludeKeyT1, 'a' | 'd'>
 // $ExpectError
 type ExcludeKeyT3 = ExcludeKeyT2['a']
@@ -78,11 +85,9 @@ type ExcludeKeyT5 = ExcludeKeyT2['c']
 // $ExpectError
 type ExcludeKeyT6 = ExcludeKeyT2['d']
 
+type RequiredKeyT1 = { a?: number | null; b?: string | null; c?: null }
 
-
-type RequiredKeyT1 = {a?: number | null, b?: string | null, c?: null}
-
-type RequiredKeyT2 = RequiredKey<{a?: number | null, b?: string | null}, 'b'>
+type RequiredKeyT2 = RequiredKey<{ a?: number | null; b?: string | null }, 'b'>
 // $ExpectType number | null | undefined
 type RequiredKeyT2T1 = RequiredKeyT2['a']
 // $ExpectType string
@@ -104,7 +109,10 @@ type RequiredKeyT4T2 = RequiredKeyT4['b']
 // $ExpectType never
 type RequiredKeyT4T3 = RequiredKeyT4['c']
 
-type RequiredKeyT5 = RequiredKey<RequiredKey<RequiredKey<RequiredKeyT1, 'a'>, 'c'>, 'b'>
+type RequiredKeyT5 = RequiredKey<
+  RequiredKey<RequiredKey<RequiredKeyT1, 'a'>, 'c'>,
+  'b'
+>
 // $ExpectType number
 type RequiredKeyT5T1 = RequiredKeyT5['a']
 // $ExpectType string
@@ -121,13 +129,11 @@ type RequiredKeyT6T2 = RequiredKeyT6['b']
 type RequiredKeyT6T3 = RequiredKeyT6['c']
 
 // $ExpectError
-type RequiredKeyT7 = RequiredKey<{a?: number | null, b?: string | null}, 'c'>
+type RequiredKeyT7 = RequiredKey<{ a?: number | null; b?: string | null }, 'c'>
 
+type OptionalKeyT1 = { a: number | null; b: string | null; c: null }
 
-
-type OptionalKeyT1 = {a: number | null, b: string | null, c: null}
-
-type OptionalKeyT2 = OptionalKey<{a: number | null, b: string | null}, 'b'>
+type OptionalKeyT2 = OptionalKey<{ a: number | null; b: string | null }, 'b'>
 // $ExpectType number | null
 type OptionalKeyT2T1 = OptionalKeyT2['a']
 // $ExpectType string | null | undefined
@@ -149,7 +155,10 @@ type OptionalKeyT4T2 = OptionalKeyT4['b']
 // $ExpectType null | undefined
 type OptionalKeyT4T3 = OptionalKeyT4['c']
 
-type OptionalKeyT5 = OptionalKey<OptionalKey<OptionalKey<OptionalKeyT1, 'a'>, 'c'>, 'b'>
+type OptionalKeyT5 = OptionalKey<
+  OptionalKey<OptionalKey<OptionalKeyT1, 'a'>, 'c'>,
+  'b'
+>
 // $ExpectType number | null | undefined
 type OptionalKeyT5T1 = OptionalKeyT5['a']
 // $ExpectType string | null | undefined
@@ -166,19 +175,15 @@ type OptionalKeyT6T2 = OptionalKeyT6['b']
 type OptionalKeyT6T3 = OptionalKeyT6['c']
 
 // $ExpectError
-type OptionalKeyT7 = OptionalKey<{a: number | null, b: string | null}, 'c'>
+type OptionalKeyT7 = OptionalKey<{ a: number | null; b: string | null }, 'c'>
 
-
-
-type DeepTypeT1 = {a?: number | null, b?: {c: string | null}}
+type DeepTypeT1 = { a?: number | null; b?: { c: string | null } }
 // $ExpectType { a?: boolean | null | undefined; b?: { c: boolean | null; } | undefined; }
 type DeepTypeT2 = DeepType<DeepTypeT1, boolean>
 // $ExpectType { a?: string | boolean | null | undefined; b?: { c: string | boolean | null; } | undefined; }
 type DeepTypeT3 = DeepType<DeepTypeT1, boolean | string>
 // $ExpectType { a?: any; b?: { c: any; } | undefined; }
 type DeepTypeT4 = DeepType<DeepTypeT1, any>
-
-
 
 // $ExpectType never
 type PickNullableT1 = PickNullable<number>
@@ -188,8 +193,6 @@ type PickNullableT2 = PickNullable<number | null>
 type PickNullableT3 = PickNullable<number | undefined>
 // $ExpectType null | undefined
 type PickNullableT4 = PickNullable<number | null | undefined>
-
-
 
 const DeepPickV1 = { a: true, c: { e: true, f: { g: true } } }
 type DeepPickT1 = {

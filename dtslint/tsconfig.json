@@ -8,6 +8,12 @@
     "noImplicitThis": true,
     "noUnusedLocals": false,
     "strictNullChecks": true,
-    "strictFunctionTypes": true
+    "strictFunctionTypes": true,
+    "baseUrl": ".",
+    "paths": {
+      "@c4605/ts-types": [
+        "../src"
+      ]
+    }
   }
 }
