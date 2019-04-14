@@ -2,7 +2,7 @@
   "name": "@c4605/ts-types",
   "version": "0.2.0",
   "description": "TypeScript type helpers",
-  "main": "src/index.ts",
+  "main": "src/index.d.ts",
   "license": "MIT",
   "scripts": {
     "start": "yarn test && watch -p src/**/*.ts -p dtslint/**/*.ts -c 'yarn test'",
