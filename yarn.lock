@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@c4605/toolconfs@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@c4605/toolconfs/-/toolconfs-0.3.0.tgz#add35604f1fe4d4f8b71b23763bc0b054026cfe8"
-  integrity sha512-2EqSrwUVxMftmpuLxgd4izZln9kHerQbUNoPGyp7TfQmYUKRbgxphkjh4RbtZjqtuA4GbQl1lR/eU5tuW9omLQ==
+"@c4605/toolconfs@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@c4605/toolconfs/-/toolconfs-0.5.0.tgz#c28c5879e9a25f7494a39a0c91c9117703c87bb6"
+  integrity sha512-gkD6RUORSenhOZPUGzxwhZqfEH/hB/n4gHfJ8ijUPvu0fpIXqKBH939wNE5hYKYaxk2R2/WWICOG+uY+d2oy0Q==
   dependencies:
     "@commitlint/config-conventional" "^7.5.0"
     tslint-config-prettier "^1.18.0"
