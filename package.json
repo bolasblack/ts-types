@@ -5,7 +5,7 @@
   "main": "src/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "start": "yarn test && watch -p src/**/*.ts -p dtslint/**/*.ts -c 'yarn test'",
+    "start": "yarn test && nodemon -w src/**/*.ts -w dtslint/**/*.ts --exec 'yarn test'",
     "test": "node ./node_modules/.bin/dtslint --onlyTestTsNext dtslint"
   },
   "devDependencies": {
@@ -13,8 +13,8 @@
     "@commitlint/cli": "^8.1.0",
     "dtslint": "^0.8.0",
     "git-hook-pure": "^1.2.2",
-    "tslint": "^5.18.0",
-    "watch-cli": "^0.2.3"
+    "nodemon": "^1.19.1",
+    "tslint": "^5.18.0"
   },
   "peerDependencies": {
     "typescript": "^3.4.2"
