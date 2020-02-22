@@ -11,7 +11,7 @@
   "devDependencies": {
     "@c4605/toolconfs": "^4.7.0",
     "@commitlint/cli": "^8.1.0",
-    "dtslint": "^2.0.0",
+    "dtslint": "^3.0.0",
     "git-hook-pure": "^1.2.2",
     "nodemon": "^1.19.1",
     "tslint": "^5.19.0"
