@@ -1,4 +1,4 @@
-# ts-types
+# @c4605/ts-types (Moved to [the new repo](https://github.com/bolasblack/js-metarepo/tree/develop/packages/ts-types))
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/bolasblack/ts-types.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.com/bolasblack/ts-types.svg?branch=master)](https://travis-ci.com/bolasblack/ts-types)
 
